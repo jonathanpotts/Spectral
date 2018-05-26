@@ -1,4 +1,4 @@
-![Image](https://jonathanpotts.github.io/Spectral/images/favicon.png)
+!(https://jonathanpotts.github.io/Spectral/images/favicon.png)
 # Spectral
 
 ## Unified RGB LED Illumination
