@@ -53,14 +53,22 @@
             </nav>
 			<div>
 				<div class="container">
-					<div class="py-4"></div>
-					<div class="text-center">
-						<img src="{{ "/images/brand.svg" | relative_url }}" width="160" height="160" alt="" aria-hidden="true" />
-						<div class="py-2"></div>
-						<p class="display-4">Spectral</p>
-						<h1 class="h4">RGB LED Illumination for Unreal Engine, Unity, C++, and .NET</h1>
-					</div>
-					<div class="py-4"></div>
+					{% if page.home == true %}
+						<div class="py-4"></div>
+						<div class="text-center">
+							<img src="{{ "/images/brand.svg" | relative_url }}" width="160" height="160" alt="" aria-hidden="true" />
+							<div class="py-2"></div>
+							<p class="display-4">Spectral</p>
+							<h1 class="h4">RGB LED Illumination for Unreal Engine, Unity, C++, and .NET</h1>
+						</div>
+						<div class="py-4"></div>
+					{% else %}
+						<div class="py-5"></div>
+						<div class="text-center">
+							<h1>{{ page.title }}</h1>
+						</div>
+						<div class="py-5"></div>
+					{% endif %}
 				</div>
 			</div>
 		</header>
