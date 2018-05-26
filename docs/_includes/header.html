@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		{% if page.home == true %}
+		{% if page.title == null %}
 			<title>RGB LED Illumination for Unreal Engine, Unity, C++, and .NET - Spectral</title>
 			<meta property="og:title" content="Spectral - RGB LED Illumination for Unreal Engine, Unity, C++, and .NET" />
 		{% else %}
@@ -58,7 +58,7 @@
             </nav>
 			<div>
 				<div class="container">
-					{% if page.home == true %}
+					{% if layout.home == true %}
 						<div class="py-4"></div>
 						<div class="text-center">
 							<img src="{{ "/images/brand.svg" | relative_url }}" width="160" height="160" alt="" aria-hidden="true" />
