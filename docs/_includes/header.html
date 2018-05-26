@@ -31,7 +31,7 @@
 		<header>
 			<nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#000">
 				<div class="container">
-					<a class="navbar-brand" href="{{ site.baseurl }}{% link /index.html %}">
+					<a class="navbar-brand" href="{% link /index.html %}">
 						<img src="{{ "/images/brand.svg" | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="">
 						Spectral
 					</a>
@@ -45,12 +45,12 @@
 									Documentation
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="{{ site.baseurl }}{% link /unreal-engine.html %}">Unreal Engine</a>
-									<a class="dropdown-item" href="{{ site.baseurl }}{% link /unity.html %}">Unity</a>
+									<a class="dropdown-item" href="{% link /unreal-engine.html %}">Unreal Engine</a>
+									<a class="dropdown-item" href="{% link /unity.html %}">Unity</a>
 								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="{{ site.baseurl }}{% link /support.html %}">Support</a>
+								<a class="nav-link" href="{% link /support.html %}">Support</a>
 							</li>
 						</ul>
 					</div>
