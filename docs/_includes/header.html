@@ -2,16 +2,23 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-		<title>RGB LED Illumination for Unreal Engine, Unity, C++, and .NET - Spectral</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+		{% if page.home == true %}
+			<title>RGB LED Illumination for Unreal Engine, Unity, C++, and .NET - Spectral</title>
+			<meta property="og:title" content="Spectral - RGB LED Illumination for Unreal Engine, Unity, C++, and .NET" />
+		{% else %}
+			<title>Spectral - {{ page.title }}</title>
+			<meta property="og:title" content="Spectral - {{ page.title }}" />
+		{% endif %}
+
 		<meta name="description" content="Add RGB LED illumination to your games and applications made with Unreal Engine, Unity, C++, and .NET. Spectral adds RGB LED illumination on devices on all supported brands (e.g. Logitech, Corsair) instead of only the devices of a specific brand." />
-		<meta property="og:title" content="Spectral - RGB LED Illumination for Unreal Engine, Unity, C++, and .NET" />
+		<meta property="og:description" content="Add RGB LED illumination to your games and applications made with Unreal Engine, Unity, C++, and .NET. Spectral adds RGB LED illumination on devices on all supported brands (e.g. Logitech, Corsair) instead of only the devices of a specific brand." />
 		<meta property="og:type" content="website" />
 		<meta property="og:image" content="{{ "/images/og_image.png" | absolute_url }}" />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:url" content="{{ absolute_url }}" />
-		<meta property="og:description" content="Add RGB LED illumination to your games and applications made with Unreal Engine, Unity, C++, and .NET. Spectral adds RGB LED illumination on devices on all supported brands (e.g. Logitech, Corsair) instead of only the devices of a specific brand." />
 		<meta property="fb:app_id" content="1923213334658273" />
 		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:creator" content="@jonathanpotts" />
@@ -24,7 +31,7 @@
 		<header>
 			<nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#000">
 				<div class="container">
-					<a class="navbar-brand" href="/">
+					<a class="navbar-brand" href="{{ site.baseurl }}{% link /index.html %}">
 						<img src="{{ "/images/brand.svg" | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="">
 						Spectral
 					</a>
@@ -38,14 +45,12 @@
 									Documentation
 								</a>
 								<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-									<a class="dropdown-item" href="docs/unreal-engine/">Unreal Engine</a>
-									<a class="dropdown-item" href="docs/unity/">Unity</a>
-									<a class="dropdown-item" href="docs/cpp/">C++</a>
-									<a class="dropdown-item" href="docs/csharp/">C#</a>
+									<a class="dropdown-item" href="{{ site.baseurl }}{% link /unreal-engine.html %}">Unreal Engine</a>
+									<a class="dropdown-item" href="{{ site.baseurl }}{% link /unity.html %}">Unity</a>
 								</div>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="support/">Support</a>
+								<a class="nav-link" href="{{ site.baseurl }}{% link /support.html %}">Support</a>
 							</li>
 						</ul>
 					</div>
