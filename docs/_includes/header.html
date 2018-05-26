@@ -17,15 +17,15 @@
 		<meta name="twitter:creator" content="@jonathanpotts" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous" />
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-		<link href="/images/favicon.png" rel="shortcut icon" />
-		<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="{{ "/images/favicon.png" | relative_url }}" rel="shortcut icon" />
+		<link href="{{ "/images/apple-touch-icon.png" | relative_url }}" rel="apple-touch-icon" />
 	</head>
 	<body class="bg-dark text-light" style="font-family:Roboto,sans-serif">
 		<header>
 			<nav class="navbar navbar-dark navbar-expand-lg" style="background-color:#000">
 				<div class="container">
 					<a class="navbar-brand" href="/">
-						<img src="/images/brand.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+						<img src="{{ "/images/brand.svg" | relative_url }}" width="30" height="30" class="d-inline-block align-top" alt="">
 						Spectral
 					</a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,7 +55,7 @@
 				<div class="container">
 					<div class="py-4"></div>
 					<div class="text-center">
-						<img src="/images/brand.svg" width="160" height="160" alt="" aria-hidden="true" />
+						<img src="{{ "/images/brand.svg" | relative_url }}" width="160" height="160" alt="" aria-hidden="true" />
 						<div class="py-2"></div>
 						<p class="display-4">Spectral</p>
 						<h1 class="h4">RGB LED Illumination for Unreal Engine, Unity, C++, and .NET</h1>
