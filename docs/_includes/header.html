@@ -65,7 +65,7 @@
 			<div>
 				<div class="container">
 					{% if layout.home == true %}
-						<div class="py-4"></div>
+						<div class="py-4 d-print-none"></div>
 						<div class="text-center">
 							<img src="{{ "/images/brand.svg" | relative_url }}" width="160" height="160" alt="" aria-hidden="true" />
 							<div class="py-2"></div>
@@ -74,11 +74,12 @@
 						</div>
 						<div class="py-4"></div>
 					{% else %}
-						<div class="py-5"></div>
+						<div class="py-5 d-print-none"></div>
 						<div class="text-center">
 							<h1>{{ page.title }}</h1>
 						</div>
-						<div class="py-5"></div>
+						<div class="py-5 d-print-none"></div>
+						<div class="py-2 d-none d-print-block"></div>
 					{% endif %}
 				</div>
 			</div>
