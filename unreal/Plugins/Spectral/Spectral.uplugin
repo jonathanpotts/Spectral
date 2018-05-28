@@ -1,0 +1,23 @@
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0",
+	"FriendlyName": "Spectral RGB LED Illumination",
+	"Description": "Add RGB LED illumination to your games and applications. Spectral adds RGB LED illumination on devices on all supported brands (e.g. Logitech, Corsair) instead of only the devices of a specific brand.",
+	"Category": "RGB LED Illumination",
+	"CreatedBy": "Jonathan Potts",
+	"CreatedByURL": "https://spectralrgb.azurewebsites.net/",
+	"DocsURL": "https://spectralrgb.azurewebsites.net/docs/unreal-engine/",
+	"MarketplaceURL": "",
+	"SupportURL": "https://spectralrgb.azurewebsites.net/support/",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": false,
+	"Modules": [
+		{
+			"Name": "Spectral",
+			"Type": "Runtime",
+			"LoadingPhase": "PreLoadingScreen"
+		}
+	]
+}

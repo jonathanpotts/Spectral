@@ -1,0 +1,6 @@
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\bin\x86\Release\Logi_SetTargetZone_Sample_CS.exe.config
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\bin\x86\Release\Logi_SetTargetZone_Sample_CS.exe
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\bin\x86\Release\Logi_SetTargetZone_Sample_CS.pdb
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\obj\x86\Release\Logi_SetTargetZone_Sample_CS.csprojResolveAssemblyReference.cache
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\obj\x86\Release\Logi_SetTargetZone_Sample_CS.exe
+D:\BuildAgent\work\3888bc7dcab9828f\Src\SDKs\LED\Src\Samples\Logi_SetTargetZone_Sample_CS\Logi_SetTargetZone_Sample_CS\obj\x86\Release\Logi_SetTargetZone_Sample_CS.pdb

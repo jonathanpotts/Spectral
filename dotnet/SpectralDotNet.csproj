@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Spectral</RootNamespace>
+    <PackageId>Spectral</PackageId>
+    <Authors>Jonathan Potts</Authors>
+    <Company>Jonathan Potts</Company>
+    <Product>Spectral</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageLicenseUrl>https://github.com/jonathanpotts/Spectral/blob/master/LICENSE.md</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/jonathanpotts/Spectral</RepositoryUrl>
+    <PackageProjectUrl>https://jonathanpotts.github.io/Spectral/</PackageProjectUrl>
+    <Copyright>Copyright (c) 2018 Jonathan Potts</Copyright>
+    <PackageIconUrl>https://raw.githubusercontent.com/jonathanpotts/Spectral/master/nuget.png</PackageIconUrl>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>bin\Debug\netstandard2.0\SpectralDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\SpectralDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\base\Spectral.vcxproj">
+      <Project>{BE5DC0FA-F74B-49F9-9C36-7A14E86E26BB}</Project>
+      <Name>Spectral</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <OutputItemType>Content</OutputItemType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </ProjectReference>
+  </ItemGroup>
+
+</Project>
