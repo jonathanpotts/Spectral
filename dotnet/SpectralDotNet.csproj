@@ -23,14 +23,4 @@
     <DocumentationFile>bin\Release\netstandard2.0\SpectralDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\base\Spectral.vcxproj">
-      <Project>{BE5DC0FA-F74B-49F9-9C36-7A14E86E26BB}</Project>
-      <Name>Spectral</Name>
-      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
-      <OutputItemType>Content</OutputItemType>
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </ProjectReference>
-  </ItemGroup>
-
 </Project>
