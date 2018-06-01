@@ -18,6 +18,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>rgb;led;logitech;corsair;razer</PackageTags>
     <PackageReleaseNotes>Initial release with support for Logitech, Corsair, and Razer keyboards, mice, mousepads, headsets, headset stands, and speakers.</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
