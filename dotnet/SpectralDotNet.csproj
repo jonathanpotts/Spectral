@@ -21,13 +21,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="build\*">
+      <PackagePath>build</PackagePath>
+      <Pack>true</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\base\bin\Win32\Release\*.dll">
-      <PackagePath>runtimes/win-x86/native</PackagePath>
+      <PackagePath>runtimes\win-x86\native</PackagePath>
       <Pack>true</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\base\bin\x64\Release\*.dll">
-      <PackagePath>runtimes/win-x64/native</PackagePath>
+      <PackagePath>runtimes\win-x64\native</PackagePath>
       <Pack>true</Pack>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
