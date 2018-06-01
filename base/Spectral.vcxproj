@@ -88,11 +88,15 @@
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\lib\logitechg\LED\Include;..\lib\corsair\CUESDK\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\lib\logitechg\LED\Lib\x86;..\lib\corsair\CUESDK\lib\i386;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>..\lib\logitechg\LED\Include;..\lib\corsair\CUESDK\include;$(IncludePath)</IncludePath>
     <LibraryPath>..\lib\logitechg\LED\Lib\x64;..\lib\corsair\CUESDK\lib\x64;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)bin\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -103,7 +107,6 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;SPECTRAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
-      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,7 +127,6 @@
       <PreprocessorDefinitions>_DEBUG;SPECTRAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
-      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -147,7 +149,6 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;SPECTRAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
-      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -171,7 +172,6 @@
       <PreprocessorDefinitions>NDEBUG;SPECTRAL_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <ExceptionHandling>SyncCThrow</ExceptionHandling>
-      <GenerateXMLDocumentationFiles>true</GenerateXMLDocumentationFiles>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
