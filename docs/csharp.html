@@ -8,7 +8,7 @@ permalink: /csharp/
 <p>Namespace: Spectral</p>
 <p>Performs operations for RGB LED Illumination.</p>
 {% highlight csharp %}
-class Led
+public class Led
 {% endhighlight %}
 
 <h3>Methods</h3>
@@ -56,7 +56,7 @@ class Led
         </tr>
         <tr>
             <td>
-                <a href="#SetColor">SetColor(byte, byte, byte)</a>
+                <a href="#SetColor1">SetColor(byte, byte, byte)</a>
             </td>
             <td>
                 Sets the color of all LEDs on enabled devices to the specified color.
@@ -64,7 +64,15 @@ class Led
         </tr>
         <tr>
             <td>
-                <a href="#SetColorForDevice">SetColorForDevice(DeviceType, byte, byte, byte)</a>
+                <a href="#SetColor2">SetColor(Color)</a>
+            </td>
+            <td>
+                Sets the color of all LEDs on enabled devices to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForDevice1">SetColorForDevice(DeviceType, byte, byte, byte)</a>
             </td>
             <td>
                 Sets the color of all enabled devices of the specified type to the specified color.
@@ -72,7 +80,15 @@ class Led
         </tr>
         <tr>
             <td>
-                <a href="#SetColorForLed">SetColorForLed(LedName, byte, byte, byte)</a>
+                <a href="#SetColorForDevice2">SetColorForDevice(DeviceType, Color)</a>
+            </td>
+            <td>
+                Sets the color of all enabled devices of the specified type to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForLed1">SetColorForLed(LedName, byte, byte, byte)</a>
             </td>
             <td>
                 Sets the color of the specified LED on enabled devices to the specified color.
@@ -80,7 +96,39 @@ class Led
         </tr>
         <tr>
             <td>
-                <a href="#SetColorForLeds">SetColorForLeds(List&lt;LedName&gt;, byte, byte, byte)</a>
+                <a href="#SetColorForLed2">SetColorForLed(LedName, Color)</a>
+            </td>
+            <td>
+                Sets the color of the specified LED on enabled devices to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForLeds1">SetColorForLeds(List&lt;LedName&gt;, byte, byte, byte)</a>
+            </td>
+            <td>
+                Sets the color of the specified LEDs on enabled devices to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForLeds2">SetColorForLeds(List&lt;LedName&gt;, Color)</a>
+            </td>
+            <td>
+                Sets the color of the specified LEDs on enabled devices to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForLeds3">SetColorForLeds(LedName[], byte, byte, byte)</a>
+            </td>
+            <td>
+                Sets the color of the specified LEDs on enabled devices to the specified color.
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a href="#SetColorForLeds4">SetColorForLeds(LedName[], Color)</a>
             </td>
             <td>
                 Sets the color of the specified LEDs on enabled devices to the specified color.
@@ -141,7 +189,7 @@ public static bool RazerIsEnabled();
 <p>bool</p>
 <p>True if Razer device support is enabled.</p>
 
-<a id="SetColor"></a>
+<a id="SetColor1"></a>
 <h3>SetColor(byte, byte, byte)</h3>
 <p>Sets the color of all LEDs on enabled devices to the specified color.</p>
 {% highlight csharp %}
@@ -160,7 +208,22 @@ public static bool SetColor(byte red, byte green, byte blue);
 <p>bool</p>
 <p>True if LEDs on all enabled devices were successfully set.</p>
 
-<a id="SetColorForDevice"></a>
+<a id="SetColor2"></a>
+<h3>SetColor(Color)</h3>
+<p>Sets the color of all LEDs on enabled devices to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColor(Color color);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>color</code> Color</p>
+<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<h4>Returns</h4>
+<p>bool</p>
+<p>True if LEDs on all enabled devices were successfully set.</p>
+
+<a id="SetColorForDevice1"></a>
 <h3>SetColorForDevice(DeviceType, byte, byte, byte)</h3>
 <p>Sets the color of all enabled devices of the specified type to the specified color.</p>
 {% highlight csharp %}
@@ -181,7 +244,24 @@ public static bool SetColorForDevice(DeviceType deviceType, byte red, byte green
 <p>bool</p>
 <p>True if LEDs on all enabled devices were successfully set.</p>
 
-<a id="SetColorForLed"></a>
+<a id="SetColorForDevice2"></a>
+<h3>SetColorForDevice(DeviceType, Color)</h3>
+<p>Sets the color of all enabled devices of the specified type to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColorForDevice(DeviceType deviceType, Color color);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>deviceType</code> DeviceType</p>
+<p>The type of devices to set.</p>
+<p><code>color</code> Color</p>
+<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<h4>Returns</h4>
+<p>bool</p>
+<p>True if LEDs on all enabled devices were successfully set.</p>
+
+<a id="SetColorForLed1"></a>
 <h3>SetColorForLed(LedName, byte, byte, byte)</h3>
 <p>Sets the color of the specified LED on enabled devices to the specified color.</p>
 {% highlight csharp %}
@@ -202,7 +282,24 @@ public static bool SetColorForLed(LedName ledName, byte red, byte green, byte bl
 <p>bool</p>
 <p>True if specified LED on any enabled device was successfully set.</p>
 
-<a id="SetColorForLeds"></a>
+<a id="SetColorForLed2"></a>
+<h3>SetColorForLed(LedName, Color)</h3>
+<p>Sets the color of the specified LED on enabled devices to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColorForLed(LedName ledName, Color color);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>ledName</code> LedName</p>
+<p>The LED Name value for the LED to be set.</p>
+<p><code>color</code> Color</p>
+<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<h4>Returns</h4>
+<p>bool</p>
+<p>True if specified LED on any enabled device was successfully set.</p>
+
+<a id="SetColorForLeds1"></a>
 <h3>SetColorForLeds(List&lt;LedName&gt;, byte, byte, byte)</h3>
 <p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
 {% highlight csharp %}
@@ -210,7 +307,7 @@ public static bool SetColorForLeds(List<LedName> ledNames, byte red, byte green,
 {% endhighlight %}
 
 <h4>Parameters</h4>
-<p><code>ledName</code> LedName</p>
+<p><code>ledNames</code> List&lt;LedName&gt;</p>
 <p>The LED Name values for the LEDs to be set.</p>
 <p><code>red</code> byte</p>
 <p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
@@ -218,6 +315,57 @@ public static bool SetColorForLeds(List<LedName> ledNames, byte red, byte green,
 <p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
 <p><code>blue</code> byte</p>
 <p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<h4>Returns</h4>
+<p>bool</p>
+<p>True if specified LEDs on any enabled device was successfully set.</p>
+
+<a id="SetColorForLeds2"></a>
+<h3>SetColorForLeds(List&lt;LedName&gt;, Color)</h3>
+<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColorForLeds(List<LedName> ledNames, Color color);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>ledNames</code> List&lt;LedName&gt;</p>
+<p>The LED Name values for the LEDs to be set.</p>
+<p><code>color</code> Color</p>
+<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<a id="SetColorForLeds3"></a>
+<h3>SetColorForLeds(LedName[], byte, byte, byte)</h3>
+<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColorForLeds(LedName[] ledNames, byte red, byte green, byte blue);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>ledNames</code> LedName[]</p>
+<p>The LED Name values for the LEDs to be set.</p>
+<p><code>red</code> byte</p>
+<p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+<p><code>green</code> byte</p>
+<p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+<p><code>blue</code> byte</p>
+<p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+
+<h4>Returns</h4>
+<p>bool</p>
+<p>True if specified LEDs on any enabled device was successfully set.</p>
+
+<a id="SetColorForLeds3"></a>
+<h3>SetColorForLeds(LedName[], Color)</h3>
+<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+{% highlight csharp %}
+public static bool SetColorForLeds(LedName[] ledNames, Color color);
+{% endhighlight %}
+
+<h4>Parameters</h4>
+<p><code>ledNames</code> LedName[]</p>
+<p>The LED Name values for the LEDs to be set.</p>
+<p><code>color</code> Color</p>
+<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
 
 <h4>Returns</h4>
 <p>bool</p>
