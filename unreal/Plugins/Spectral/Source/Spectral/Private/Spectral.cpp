@@ -45,11 +45,11 @@ void FSpectralModule::StartupModule()
 	FString SpectralPath, CorsairPath;
 
 #if PLATFORM_64BITS
-	CorsairPath = FPaths::Combine(*BaseDir, TEXT("ThirdParty/Corsair/Win64/CUESDK.x64_2015.dll"));
-	SpectralPath = FPaths::Combine(*BaseDir, TEXT("ThirdParty/Spectral/Win64/Spectral.dll"));
+	CorsairPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/Corsair/Win64/CUESDK.x64_2015.dll"));
+	SpectralPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/Spectral/Win64/Spectral.dll"));
 #else
-	CorsairPath = FPaths::Combine(*BaseDir, TEXT("ThirdParty/Corsair/Win32/CUESDK_2015.dll"));
-	SpectralPath = FPaths::Combine(*BaseDir, TEXT("ThirdParty/Spectral/Win32/Spectral.dll"));
+	CorsairPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/Corsair/Win32/CUESDK_2015.dll"));
+	SpectralPath = FPaths::Combine(*BaseDir, TEXT("Source/ThirdParty/Spectral/Win32/Spectral.dll"));
 #endif
 
 	CorsairHandle = !CorsairPath.IsEmpty() ? FPlatformProcess::GetDllHandle(*CorsairPath) : nullptr;

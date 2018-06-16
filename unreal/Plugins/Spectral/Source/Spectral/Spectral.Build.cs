@@ -52,7 +52,7 @@ public class Spectral : ModuleRules
 			}
 			);
 
-        string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, "..", ".."));
+        string BaseDirectory = Path.GetFullPath(Path.Combine(ModuleDirectory, ".."));
         string SpectralDirectory = Path.Combine(BaseDirectory, "ThirdParty", "Spectral", Target.Platform.ToString());
         string CorsairDirectory = Path.Combine(BaseDirectory, "ThirdParty", "Corsair", Target.Platform.ToString());
 

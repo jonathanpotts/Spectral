@@ -8,11 +8,13 @@
 	"CreatedBy": "Jonathan Potts",
 	"CreatedByURL": "https://jonathanpotts.github.io/Spectral/",
 	"DocsURL": "https://jonathanpotts.github.io/Spectral/unreal-engine/",
-	"MarketplaceURL": "",
+	"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/3dd9d2d93aab44949bda458f418290b5",
 	"SupportURL": "https://jonathanpotts.github.io/Spectral/support/",
 	"CanContainContent": false,
 	"IsBetaVersion": false,
 	"Installed": false,
+	"WhitelistPlatforms": [ "Win64", "Win32" ],
+	"EngineVersion" : "4.19.0",
 	"Modules": [
 		{
 			"Name": "Spectral",
