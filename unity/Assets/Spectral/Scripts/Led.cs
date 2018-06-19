@@ -62,7 +62,20 @@ namespace Spectral
         public static bool Initialize()
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralInitialize();
+            try
+            {
+                return SpectralInitialize();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -73,7 +86,20 @@ namespace Spectral
         public static bool IsInitialized()
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralIsInitialized();
+            try
+            {
+                return SpectralIsInitialized();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -84,7 +110,20 @@ namespace Spectral
         public static bool LogitechIsEnabled()
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralLogitechIsEnabled();
+            try
+            {
+                return SpectralLogitechIsEnabled();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -95,7 +134,20 @@ namespace Spectral
         public static bool CorsairIsEnabled()
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralCorsairIsEnabled();
+            try
+            {
+                return SpectralCorsairIsEnabled();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -106,7 +158,20 @@ namespace Spectral
         public static bool RazerIsEnabled()
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralRazerIsEnabled();
+            try
+            {
+                return SpectralRazerIsEnabled();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -120,7 +185,20 @@ namespace Spectral
         public static bool SetColor(byte red, byte green, byte blue)
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralSetColor(red, green, blue);
+            try
+            {
+                return SpectralSetColor(red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -136,7 +214,20 @@ namespace Spectral
             byte green = (byte)Mathf.Round(color.g * byte.MaxValue);
             byte blue = (byte)Mathf.Round(color.b * byte.MaxValue);
 
-            return SpectralSetColor(red, green, blue);
+            try
+            {
+                return SpectralSetColor(red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -151,7 +242,20 @@ namespace Spectral
         public static bool SetColorForLed(LedName ledName, byte red, byte green, byte blue)
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralSetColorForLed(ledName, red, green, blue);
+            try
+            {
+                return SpectralSetColorForLed(ledName, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -168,7 +272,20 @@ namespace Spectral
             byte green = (byte)Mathf.Round(color.g * byte.MaxValue);
             byte blue = (byte)Mathf.Round(color.b * byte.MaxValue);
 
-            return SpectralSetColorForLed(ledName, red, green, blue);
+            try
+            {
+                return SpectralSetColorForLed(ledName, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -183,7 +300,20 @@ namespace Spectral
         public static bool SetColorForLeds(List<LedName> ledNames, byte red, byte green, byte blue)
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralSetColorForLeds(ledNames.Count, ledNames.ToArray(), red, green, blue);
+            try
+            {
+                return SpectralSetColorForLeds(ledNames.Count, ledNames.ToArray(), red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -200,7 +330,20 @@ namespace Spectral
             byte green = (byte)Mathf.Round(color.g * byte.MaxValue);
             byte blue = (byte)Mathf.Round(color.b * byte.MaxValue);
 
-            return SpectralSetColorForLeds(ledNames.Count, ledNames.ToArray(), red, green, blue);
+            try
+            {
+                return SpectralSetColorForLeds(ledNames.Count, ledNames.ToArray(), red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -215,7 +358,20 @@ namespace Spectral
         public static bool SetColorForLeds(LedName[] ledNames, byte red, byte green, byte blue)
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralSetColorForLeds(ledNames.Length, ledNames, red, green, blue);
+            try
+            {
+                return SpectralSetColorForLeds(ledNames.Length, ledNames, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -232,7 +388,20 @@ namespace Spectral
             byte green = (byte)Mathf.Round(color.g * byte.MaxValue);
             byte blue = (byte)Mathf.Round(color.b * byte.MaxValue);
 
-            return SpectralSetColorForLeds(ledNames.Length, ledNames, red, green, blue);
+            try
+            {
+                return SpectralSetColorForLeds(ledNames.Length, ledNames, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -247,7 +416,20 @@ namespace Spectral
         public static bool SetColorForDevice(DeviceType deviceType, byte red, byte green, byte blue)
         {
 #if UNITY_STANDALONE_WIN
-            return SpectralSetColorForDevice(deviceType, red, green, blue);
+            try
+            {
+                return SpectralSetColorForDevice(deviceType, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -264,7 +446,20 @@ namespace Spectral
             byte green = (byte)Mathf.Round(color.g * byte.MaxValue);
             byte blue = (byte)Mathf.Round(color.b * byte.MaxValue);
 
-            return SpectralSetColorForDevice(deviceType, red, green, blue);
+            try
+            {
+                return SpectralSetColorForDevice(deviceType, red, green, blue);
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+                return false;
+            }
 #else
             return false;
 #endif
@@ -274,7 +469,18 @@ namespace Spectral
         public static void Shutdown()
         {
 #if UNITY_STANDALONE_WIN
-            SpectralShutdown();
+            try
+            {
+                SpectralShutdown();
+            }
+            catch (System.DllNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+            }
+            catch (System.EntryPointNotFoundException)
+            {
+                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
+            }
 #endif
         }
     }
