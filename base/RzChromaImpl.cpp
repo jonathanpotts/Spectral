@@ -196,7 +196,7 @@ BOOL RzChromaImpl::SetColorForKey(ChromaSDK::Keyboard::RZKEY key, UCHAR red, UCH
 	keyboardEffect.Key[HIBYTE(key)][LOBYTE(key)] = 0x01000000 | RGB(red, green, blue);
 
 	RZRESULT result = CreateKeyboardEffect(Keyboard::CHROMA_CUSTOM_KEY, &keyboardEffect, nullptr);
-	return result;
+	return (result == RZRESULT_SUCCESS);
 }
 
 BOOL RzChromaImpl::SetColorForKeyboardLogo(UCHAR red, UCHAR green, UCHAR blue)
@@ -205,7 +205,7 @@ BOOL RzChromaImpl::SetColorForKeyboardLogo(UCHAR red, UCHAR green, UCHAR blue)
 	keyboardEffect.Key[HIBYTE(ChromaSDK::Keyboard::RZLED_LOGO)][LOBYTE(ChromaSDK::Keyboard::RZLED_LOGO)] = 0x01000000 | RGB(red, green, blue);
 
 	RZRESULT result = CreateKeyboardEffect(Keyboard::CHROMA_CUSTOM_KEY, &keyboardEffect, nullptr);
-	return result;
+	return (result == RZRESULT_SUCCESS);
 }
 
 BOOL RzChromaImpl::SetColorForMouseLed(ChromaSDK::Mouse::RZLED2 led, UCHAR red, UCHAR green, UCHAR blue)
@@ -214,7 +214,7 @@ BOOL RzChromaImpl::SetColorForMouseLed(ChromaSDK::Mouse::RZLED2 led, UCHAR red, 
 	mouseEffect.Color[HIBYTE(led)][LOBYTE(led)] = RGB(red, green, blue);
 
 	RZRESULT result = CreateMouseEffect(Mouse::CHROMA_CUSTOM2, &mouseEffect, nullptr);
-	return result;
+	return (result == RZRESULT_SUCCESS);
 }
 
 BOOL RzChromaImpl::SetColorForHeadsetZone(UCHAR zone, UCHAR red, UCHAR green, UCHAR blue)
@@ -223,7 +223,7 @@ BOOL RzChromaImpl::SetColorForHeadsetZone(UCHAR zone, UCHAR red, UCHAR green, UC
 	headsetEffect.Color[zone] = RGB(red, green, blue);
 
 	RZRESULT result = CreateHeadsetEffect(Headset::CHROMA_CUSTOM, &headsetEffect, nullptr);
-	return result;
+	return (result == RZRESULT_SUCCESS);
 }
 
 BOOL RzChromaImpl::SetColorForMousepadZone(UCHAR zone, UCHAR red, UCHAR green, UCHAR blue)
@@ -232,5 +232,5 @@ BOOL RzChromaImpl::SetColorForMousepadZone(UCHAR zone, UCHAR red, UCHAR green, U
 	mousepadEffect.Color[zone] = RGB(red, green, blue);
 
 	RZRESULT result = CreateMousepadEffect(Mousepad::CHROMA_CUSTOM, &mousepadEffect, nullptr);
-	return result;
+	return (result == RZRESULT_SUCCESS);
 }
