@@ -38,7 +38,7 @@ namespace SpectralTest
             string status = "";
             status += $"Logitech is enabled: {Led.LogitechIsEnabled().ToString()}\n";
             status += $"Corsair is enabled: {Led.CorsairIsEnabled().ToString()}\n";
-            status += $"Razer is enabled: {Led.RazerIsEnabled().ToString()}\n";
+            // status += $"Razer is enabled: {Led.RazerIsEnabled().ToString()}\n";
 
             labelStatus.Text = status;
 

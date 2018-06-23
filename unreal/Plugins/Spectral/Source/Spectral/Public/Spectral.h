@@ -1182,7 +1182,7 @@ public:
 	 * Checks if Razer device support was enabled during initialization.
 	 * @return True if device support is enabled.
 	 */
-	static bool RazerIsEnabled();
+	//static bool RazerIsEnabled();
 
 	/**
 	 * Sets the color of all LEDs on enabled devices to the specified color.

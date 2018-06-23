@@ -22,10 +22,12 @@ bool USpectralBPLibrary::CorsairIsEnabled()
 	return FSpectralModule::CorsairIsEnabled();
 }
 
+/*
 bool USpectralBPLibrary::RazerIsEnabled()
 {
 	return FSpectralModule::RazerIsEnabled();
 }
+*/
 
 bool USpectralBPLibrary::SetColor(FColor color)
 {

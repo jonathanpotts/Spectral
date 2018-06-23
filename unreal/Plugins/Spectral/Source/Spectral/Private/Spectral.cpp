@@ -13,7 +13,7 @@ typedef bool(*SPECTRALINITIALIZE)(void);
 typedef bool(*SPECTRALISINITIALIZED)(void);
 typedef bool(*SPECTRALLOGITECHISENABLED)(void);
 typedef bool(*SPECTRALCORSAIRISENABLED)(void);
-typedef bool(*SPECTRALRAZERISENABLED)(void);
+//typedef bool(*SPECTRALRAZERISENABLED)(void);
 typedef bool(*SPECTRALSTEELSERIESISENABLED)(void);
 typedef bool(*SPECTRALSETCOLOR)(UCHAR red, UCHAR green, UCHAR blue);
 typedef bool(*SPECTRALSETCOLORFORLED)(ESpectralLedName ledName, UCHAR red, UCHAR green, UCHAR blue);
@@ -25,7 +25,7 @@ SPECTRALINITIALIZE SpectralInitialize = nullptr;
 SPECTRALISINITIALIZED SpectralIsInitialized = nullptr;
 SPECTRALLOGITECHISENABLED SpectralLogitechIsEnabled = nullptr;
 SPECTRALCORSAIRISENABLED SpectralCorsairIsEnabled = nullptr;
-SPECTRALRAZERISENABLED SpectralRazerIsEnabled = nullptr;
+//SPECTRALRAZERISENABLED SpectralRazerIsEnabled = nullptr;
 SPECTRALSTEELSERIESISENABLED SpectralSteelSeriesIsEnabled = nullptr;
 SPECTRALSETCOLOR SpectralSetColor = nullptr;
 SPECTRALSETCOLORFORLED SpectralSetColorForLed = nullptr;
@@ -69,8 +69,8 @@ void FSpectralModule::StartupModule()
 		procName = "SpectralCorsairIsEnabled";
 		SpectralCorsairIsEnabled = (SPECTRALCORSAIRISENABLED)FPlatformProcess::GetDllExport(SpectralHandle, *procName);
 
-		procName = "SpectralRazerIsEnabled";
-		SpectralRazerIsEnabled = (SPECTRALRAZERISENABLED)FPlatformProcess::GetDllExport(SpectralHandle, *procName);
+		//procName = "SpectralRazerIsEnabled";
+		//SpectralRazerIsEnabled = (SPECTRALRAZERISENABLED)FPlatformProcess::GetDllExport(SpectralHandle, *procName);
 
 		procName = "SpectralSteelSeriesIsEnabled";
 		SpectralSteelSeriesIsEnabled = (SPECTRALSTEELSERIESISENABLED)FPlatformProcess::GetDllExport(SpectralHandle, *procName);
@@ -105,7 +105,7 @@ void FSpectralModule::ShutdownModule()
 	SpectralIsInitialized = nullptr;
 	SpectralLogitechIsEnabled = nullptr;
 	SpectralCorsairIsEnabled = nullptr;
-	SpectralRazerIsEnabled = nullptr;
+	//SpectralRazerIsEnabled = nullptr;
 	SpectralSteelSeriesIsEnabled = nullptr;
 	SpectralSetColor = nullptr;
 	SpectralSetColorForLed = nullptr;
@@ -185,6 +185,7 @@ bool FSpectralModule::CorsairIsEnabled()
 #endif
 }
 
+/*
 bool FSpectralModule::RazerIsEnabled()
 {
 #if PLATFORM_WINDOWS
@@ -200,6 +201,7 @@ bool FSpectralModule::RazerIsEnabled()
 	return false;
 #endif
 }
+*/
 
 bool FSpectralModule::SetColor(UCHAR red, UCHAR green, UCHAR blue)
 {

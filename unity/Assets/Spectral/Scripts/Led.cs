@@ -35,10 +35,6 @@ namespace Spectral
 
         [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAs(UnmanagedType.I1)]
-        private extern static bool SpectralRazerIsEnabled();
-
-        [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
-        [return: MarshalAs(UnmanagedType.I1)]
         private extern static bool SpectralSetColor(byte red, byte green, byte blue);
 
         [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
@@ -137,30 +133,6 @@ namespace Spectral
             try
             {
                 return SpectralCorsairIsEnabled();
-            }
-            catch (System.DllNotFoundException)
-            {
-                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
-                return false;
-            }
-            catch (System.EntryPointNotFoundException)
-            {
-                Debug.LogError("The Spectral library could not be loaded. Is the Corsair CUE SDK missing (see setup guide)?");
-                return false;
-            }
-#else
-            return false;
-#endif
-        }
-
-        /// <summary>Checks if Razer device support was enabled during initialization.</summary>
-        /// <returns>True if Razer device support is enabled.</returns>
-        public static bool RazerIsEnabled()
-        {
-#if UNITY_STANDALONE_WIN
-            try
-            {
-                return SpectralRazerIsEnabled();
             }
             catch (System.DllNotFoundException)
             {

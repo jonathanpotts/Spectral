@@ -48,8 +48,8 @@ class SPECTRAL_API USpectralBPLibrary : public UBlueprintFunctionLibrary
 	 * Checks if Razer device support was enabled during initialization.
 	 * @return True if device support is enabled.
 	 */
-	UFUNCTION(BlueprintPure, Category = "RGB LED Illumination (Spectral)", DisplayName = "Razer Device Support Is Enabled")
-	static bool RazerIsEnabled();
+	//UFUNCTION(BlueprintPure, Category = "RGB LED Illumination (Spectral)", DisplayName = "Razer Device Support Is Enabled")
+	//static bool RazerIsEnabled();
 
 	/**
 	 * Sets the color of all LEDs on enabled devices to the specified color.

@@ -14,7 +14,7 @@ typedef bool(*SPECTRALINITIALIZE)(void);
 typedef bool(*SPECTRALISINITIALIZED)(void);
 typedef bool(*SPECTRALLOGITECHISENABLED)(void);
 typedef bool(*SPECTRALCORSAIRISENABLED)(void);
-typedef bool(*SPECTRALRAZERISENABLED)(void);
+// typedef bool(*SPECTRALRAZERISENABLED)(void);
 typedef bool(*SPECTRALSETCOLOR)(unsigned char red, unsigned char green, unsigned char blue);
 typedef bool(*SPECTRALSETCOLORFORLED)(LedName ledName, unsigned char red, unsigned char green, unsigned char blue);
 typedef bool(*SPECTRALSETCOLORFORLEDS)(int count, LedName *ledName, unsigned char red, unsigned char green, unsigned char blue);
@@ -25,7 +25,7 @@ SPECTRALINITIALIZE SpectralInitialize = nullptr;
 SPECTRALISINITIALIZED SpectralIsInitialized = nullptr;
 SPECTRALLOGITECHISENABLED SpectralLogitechIsEnabled = nullptr;
 SPECTRALCORSAIRISENABLED SpectralCorsairIsEnabled = nullptr;
-SPECTRALRAZERISENABLED SpectralRazerIsEnabled = nullptr;
+// SPECTRALRAZERISENABLED SpectralRazerIsEnabled = nullptr;
 SPECTRALSETCOLOR SpectralSetColor = nullptr;
 SPECTRALSETCOLORFORLED SpectralSetColorForLed = nullptr;
 SPECTRALSETCOLORFORLEDS SpectralSetColorForLeds = nullptr;
@@ -44,7 +44,7 @@ bool Led::Initialize()
 			SpectralIsInitialized = (SPECTRALISINITIALIZED)GetProcAddress(SpectralHandle, "SpectralIsInitialized");
 			SpectralLogitechIsEnabled = (SPECTRALLOGITECHISENABLED)GetProcAddress(SpectralHandle, "SpectralLogitechIsEnabled");
 			SpectralCorsairIsEnabled = (SPECTRALCORSAIRISENABLED)GetProcAddress(SpectralHandle, "SpectralCorsairIsEnabled");
-			SpectralRazerIsEnabled = (SPECTRALRAZERISENABLED)GetProcAddress(SpectralHandle, "SpectralRazerIsEnabled");
+			// SpectralRazerIsEnabled = (SPECTRALRAZERISENABLED)GetProcAddress(SpectralHandle, "SpectralRazerIsEnabled");
 			SpectralSetColor = (SPECTRALSETCOLOR)GetProcAddress(SpectralHandle, "SpectralSetColor");
 			SpectralSetColorForLed = (SPECTRALSETCOLORFORLED)GetProcAddress(SpectralHandle, "SpectralSetColorForLed");
 			SpectralSetColorForLeds = (SPECTRALSETCOLORFORLEDS)GetProcAddress(SpectralHandle, "SpectralSetColorForLeds");
@@ -99,6 +99,7 @@ bool Led::CorsairIsEnabled()
 	}
 }
 
+/*
 bool Led::RazerIsEnabled()
 {
 	if (SpectralRazerIsEnabled != nullptr)
@@ -110,6 +111,7 @@ bool Led::RazerIsEnabled()
 		return false;
 	}
 }
+*/
 
 bool Led::SetColor(unsigned char red, unsigned char green, unsigned char blue)
 {

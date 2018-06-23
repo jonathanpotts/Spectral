@@ -33,9 +33,11 @@ namespace Spectral
         [return: MarshalAs(UnmanagedType.I1)]
         private extern static bool SpectralCorsairIsEnabled();
 
+        /*
         [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAs(UnmanagedType.I1)]
         private extern static bool SpectralRazerIsEnabled();
+        */
 
         [DllImport(DllName, CallingConvention = CallingConvention.Cdecl)]
         [return: MarshalAs(UnmanagedType.I1)]
@@ -128,6 +130,7 @@ namespace Spectral
             }
         }
 
+        /*
         /// <summary>Checks if Razer device support was enabled during initialization.</summary>
         /// <returns>True if Razer device support is enabled.</returns>
         public static bool RazerIsEnabled()
@@ -145,6 +148,7 @@ namespace Spectral
                 return false;
             }
         }
+        */
 
         /// <summary>Sets the color of all LEDs on enabled devices to the specified color.</summary>
         /// <param name="red">The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</param>

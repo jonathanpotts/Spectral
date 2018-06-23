@@ -709,9 +709,11 @@ namespace Spectral
 		/// <returns>True if Corsair device support is enabled.</returns>
 		static bool CorsairIsEnabled();
 
+		/*
 		/// <summary>Checks if Razer device support was enabled during initialization.</summary>
 		/// <returns>True if Razer device support is enabled.</returns>
 		static bool RazerIsEnabled();
+		*/
 
 		/// <summary>Sets the color of all LEDs on enabled devices to the specified color.</summary>
 		/// <param name="red">The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</param>

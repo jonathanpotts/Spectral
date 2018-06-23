@@ -1420,7 +1420,7 @@ bool SpectralInitialize()
 		CorsairGetLedsColors(CLI_Last, SpectralSavedCorsairLedColors);
 	}
 
-	SpectralRazerEnabled = (RazerImplementation.Initialize() == TRUE);
+	// SpectralRazerEnabled = (RazerImplementation.Initialize() == TRUE);
 
 	SpectralInitialized = SpectralLogitechEnabled || SpectralCorsairEnabled || SpectralRazerEnabled;
 
@@ -1442,10 +1442,12 @@ bool SpectralCorsairIsEnabled()
 	return SpectralCorsairEnabled;
 }
 
+/*
 bool SpectralRazerIsEnabled()
 {
 	return SpectralRazerEnabled;
 }
+*/
 
 bool SpectralSetColor(UCHAR red, UCHAR green, UCHAR blue)
 {
