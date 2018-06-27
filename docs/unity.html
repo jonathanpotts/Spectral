@@ -4,6 +4,9 @@ title: Unity Documentation
 permalink: /unity/
 ---
 
+<h2>Important</h2>
+<p>Logitech Gaming Software must be running with the "Allow games to control illumination" setting enabled for Logitech devices to be controlled. Corsair Utility Engine (CUE) must be running for Corsair devices to be controlled.</p>
+
 <h2>Led Class</h2>
 <p>Namespace: Spectral</p>
 <p>Performs operations for RGB LED Illumination.</p>
@@ -284,81 +287,83 @@ public static bool SetColorForLed(LedName ledName, Color color);
 <h3>SetColorForLeds(List&lt;LedName&gt;, byte, byte, byte)</h3>
 <p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
 {% highlight csharp %}
-public static bool SetColorForLeds(List<LedName> ledNames, byte red, byte green, byte blue);
-{% endhighlight %}
+public static bool SetColorForLeds(List<LedName>
+    ledNames, byte red, byte green, byte blue);
+    {% endhighlight %}
 
-<h4>Parameters</h4>
-<p><code>ledNames</code> List&lt;LedName&gt;</p>
-<p>The LED Name values for the LEDs to be set.</p>
-<p><code>red</code> byte</p>
-<p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
-<p><code>green</code> byte</p>
-<p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
-<p><code>blue</code> byte</p>
-<p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+    <h4>Parameters</h4>
+    <p><code>ledNames</code> List&lt;LedName&gt;</p>
+    <p>The LED Name values for the LEDs to be set.</p>
+    <p><code>red</code> byte</p>
+    <p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+    <p><code>green</code> byte</p>
+    <p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+    <p><code>blue</code> byte</p>
+    <p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
 
-<h4>Returns</h4>
-<p>bool</p>
-<p>True if specified LEDs on any enabled device was successfully set.</p>
+    <h4>Returns</h4>
+    <p>bool</p>
+    <p>True if specified LEDs on any enabled device was successfully set.</p>
 
-<a id="SetColorForLeds2"></a>
-<h3>SetColorForLeds(List&lt;LedName&gt;, Color)</h3>
-<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
-{% highlight csharp %}
-public static bool SetColorForLeds(List<LedName> ledNames, Color color);
-{% endhighlight %}
+    <a id="SetColorForLeds2"></a>
+    <h3>SetColorForLeds(List&lt;LedName&gt;, Color)</h3>
+    <p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+    {% highlight csharp %}
+    public static bool SetColorForLeds(List<LedName>
+        ledNames, Color color);
+        {% endhighlight %}
 
-<h4>Parameters</h4>
-<p><code>ledNames</code> List&lt;LedName&gt;</p>
-<p>The LED Name values for the LEDs to be set.</p>
-<p><code>color</code> Color</p>
-<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+        <h4>Parameters</h4>
+        <p><code>ledNames</code> List&lt;LedName&gt;</p>
+        <p>The LED Name values for the LEDs to be set.</p>
+        <p><code>color</code> Color</p>
+        <p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
 
-<h4>Returns</h4>
-<p>bool</p>
-<p>True if specified LEDs on any enabled device was successfully set.</p>
+        <h4>Returns</h4>
+        <p>bool</p>
+        <p>True if specified LEDs on any enabled device was successfully set.</p>
 
-<a id="SetColorForLeds3"></a>
-<h3>SetColorForLeds(LedName[], byte, byte, byte)</h3>
-<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
-{% highlight csharp %}
-public static bool SetColorForLeds(LedName[] ledNames, byte red, byte green, byte blue);
-{% endhighlight %}
+        <a id="SetColorForLeds3"></a>
+        <h3>SetColorForLeds(LedName[], byte, byte, byte)</h3>
+        <p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+        {% highlight csharp %}
+        public static bool SetColorForLeds(LedName[] ledNames, byte red, byte green, byte blue);
+        {% endhighlight %}
 
-<h4>Parameters</h4>
-<p><code>ledNames</code> LedName[]</p>
-<p>The LED Name values for the LEDs to be set.</p>
-<p><code>red</code> byte</p>
-<p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
-<p><code>green</code> byte</p>
-<p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
-<p><code>blue</code> byte</p>
-<p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+        <h4>Parameters</h4>
+        <p><code>ledNames</code> LedName[]</p>
+        <p>The LED Name values for the LEDs to be set.</p>
+        <p><code>red</code> byte</p>
+        <p>The red channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+        <p><code>green</code> byte</p>
+        <p>The green channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
+        <p><code>blue</code> byte</p>
+        <p>The blue channel value for the color to set. On monochromatic devices, only the highest channel value is used.</p>
 
-<h4>Returns</h4>
-<p>bool</p>
-<p>True if specified LEDs on any enabled device was successfully set.</p>
+        <h4>Returns</h4>
+        <p>bool</p>
+        <p>True if specified LEDs on any enabled device was successfully set.</p>
 
-<a id="SetColorForLeds4"></a>
-<h3>SetColorForLeds(LedName[], Color)</h3>
-<p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
-{% highlight csharp %}
-public static bool SetColorForLeds(LedName[] ledNames, Color color);
-{% endhighlight %}
+        <a id="SetColorForLeds4"></a>
+        <h3>SetColorForLeds(LedName[], Color)</h3>
+        <p>Sets the color of the specified LEDs on enabled devices to the specified color.</p>
+        {% highlight csharp %}
+        public static bool SetColorForLeds(LedName[] ledNames, Color color);
+        {% endhighlight %}
 
-<h4>Parameters</h4>
-<p><code>ledNames</code> LedName[]</p>
-<p>The LED Name values for the LEDs to be set.</p>
-<p><code>color</code> Color</p>
-<p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
+        <h4>Parameters</h4>
+        <p><code>ledNames</code> LedName[]</p>
+        <p>The LED Name values for the LEDs to be set.</p>
+        <p><code>color</code> Color</p>
+        <p>The color to set. On monochromatic devices, only the highest channel value is used.</p>
 
-<h4>Returns</h4>
-<p>bool</p>
-<p>True if specified LEDs on any enabled device was successfully set.</p>
+        <h4>Returns</h4>
+        <p>bool</p>
+        <p>True if specified LEDs on any enabled device was successfully set.</p>
 
-<a id="Shutdown"></a>
-<h3>Shutdown()</h3>
-<p>Manually shut down the Spectral library. If not called, the library should shutdown when the application exits.</p>
-{% highlight csharp %}
-public static void Shutdown();
-{% endhighlight %}
+        <a id="Shutdown"></a>
+        <h3>Shutdown()</h3>
+        <p>Manually shut down the Spectral library. If not called, the library should shutdown when the application exits.</p>
+        {% highlight csharp %}
+        public static void Shutdown();
+        {% endhighlight %}

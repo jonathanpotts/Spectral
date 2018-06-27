@@ -18,3 +18,6 @@ A .NET wrapper for Spectral has been written in C# using .NET Standard 2.0. It c
 
 ## Documentation
 For more information, visit the documentation site at: https://jonathanpotts.github.io/Spectral/
+
+## Important
+Logitech Gaming Software must be running with the "Allow games to control illumination" setting enabled for Logitech devices to be controlled. Corsair Utility Engine (CUE) must be running for Corsair devices to be controlled.
