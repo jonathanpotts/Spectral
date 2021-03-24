@@ -19,7 +19,7 @@ A C++ wrapper for Spectral is available. It can be used to implement RGB LED Ill
 A .NET wrapper for Spectral has been written in C# using .NET Standard 2.0. It can be used to implement RGB LED Illumination support in your .NET Framework, .NET Core, and MonoGame games and applications. The source code is documented and has IntelliSense support. 
 
 ## Documentation
-For more information, visit the documentation site at: https://jonathanpotts.github.io/Spectral/
+For more information, visit the documentation site at: https://jonathanpotts.com/Spectral/
 
 ## Important
 Logitech Gaming Software must be running with the "Allow games to control illumination" setting enabled for Logitech devices to be controlled. Corsair Utility Engine (CUE) must be running for Corsair devices to be controlled.
