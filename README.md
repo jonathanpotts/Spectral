@@ -1,7 +1,7 @@
 ![Spectral](https://github.com/jonathanpotts/Spectral/raw/main/nuget.png)
 # Spectral
 
-[![nuget downloads](https://img.shields.io/nuget/dt/Spectral?label=nuget%20downloads)](https://www.nuget.org/packages/Spectral/)
+**NOTE:** This library is no longer maintained; however, it may still function and it could be a good starting point to build a newer library from.
 
 ## Unified RGB LED Illumination
 Spectral provides unified RGB LED illumination for your games and applications made with Unity, Unreal Engine, .NET, and C++. By implementing the Spectral library, your games and applications can control the RGB LED illumination on devices on all supported brands (e.g. Logitech, Corsair) instead of only the devices of a specific brand. Due to limitations of the devices, Spectral only works for games and applications on the Windows desktop platform. Spectral will fail gracefully for unsupported platforms. 
